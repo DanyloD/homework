@@ -12,10 +12,10 @@ def is_palindrome(s: str):
 
 
 def fib(n):
-    f_nums = [0, 1]
-    while len(f_nums) <= n - 1:
-        f_nums.append(sum(f_nums[-2:]))
-    return f_nums[-1]
+    if n <= 1:
+        return n
+    else:
+        return fib(n-1) + fib(n-2)
 
 
 def bubble_sort(li):
